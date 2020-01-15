@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shutter App</title>
+<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1>Shutter App</h1>
+
+<input id="id1" type="button" value="<-Go-Up->" onclick="goUpClick();" /><br>
+<input id="id2" type="button" value="<-Stop!->" onclick="stopClick();" /><br>
+<input id="id3" type="button" value="<-Go-Down->" onclick="goDownClick();" />
+
+<script type="text/javascript">
+  //- Using a function pointer:
+  //document.getElementById("clickMe").onclick = doFunction;
+
+  function goUpClick() {
+    sendToMailbox('go-up');
+  };
+
+  function stopClick() {
+    sendToMailbox('stop');
+  };
+
+
+  function goDownClick() {
+    sendToMailbox('go-down');
+  };
+
+  function sendToMailbox(msg){
+    // Do HTTP GET request.
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/mailbox/' + msg);
+    xhr.send(null);
+
+  };
+
+
+
+</script>
+</body>
+</html>
