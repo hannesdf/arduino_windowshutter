@@ -33,3 +33,5 @@ https://realpython.com/arduino-python/#hello-world-with-arduino-and-python
 2) IFTTT
 
 Let me know what you think ! :)
+
+Hannes
